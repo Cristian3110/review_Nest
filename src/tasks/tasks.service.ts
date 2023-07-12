@@ -32,7 +32,8 @@ export class TasksService {
   updateTask() {
     return { msg: 'update Task' };
   }
-  deleteTask() {
-    return { msg: 'delete Task' };
+  deleteTask(id: string) {
+    //devolviendo el arreglo sin el difererente
+    this.tasks = this.tasks.filter((task) => task.id !== id);
   }
 }
