@@ -1,6 +1,13 @@
-// desde el client
+// desde el client DTO
+import { TaskStatus } from '../task.entity';
 
 export class CreateTaskDto {
   title: string;
   description: string;
+}
+
+export class UpdateTaskDto {
+  title?: string;
+  description?: string;
+  status?: TaskStatus;
 }
